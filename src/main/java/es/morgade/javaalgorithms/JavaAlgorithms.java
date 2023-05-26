@@ -4,6 +4,10 @@
 
 package es.morgade.javaalgorithms;
 
+import algorithms.IntManipulation;
+import algorithms.BooleanCheck;
+import algorithms.StringResolver;
+
 
 /**
  *
@@ -12,6 +16,12 @@ package es.morgade.javaalgorithms;
 public class JavaAlgorithms {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        
+        IntManipulation n = new IntManipulation();
+        BooleanCheck b = new BooleanCheck();
+        StringResolver s = new StringResolver();
+        
+        int number =n.biggestDigit(987);
+        System.out.println(number);
     }
 }
