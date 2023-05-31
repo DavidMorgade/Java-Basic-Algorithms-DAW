@@ -4,9 +4,10 @@
 
 package es.morgade.javaalgorithms;
 
+import algorithms.ArrayMan;
 import algorithms.IntManipulation;
-import algorithms.BooleanCheck;
-import algorithms.StringResolver;
+import java.util.Scanner;
+
 
 
 /**
@@ -17,11 +18,9 @@ public class JavaAlgorithms {
 
     public static void main(String[] args) {
         
-        IntManipulation n = new IntManipulation();
-        BooleanCheck b = new BooleanCheck();
-        StringResolver s = new StringResolver();
+        int[] numeros = {3, 5, 6, 7, 10};
         
-        int number =n.biggestDigit(987);
-        System.out.println(number);
+      double resultado = ArrayMan.mediaArray(numeros);
+        System.out.println(resultado);
     }
 }

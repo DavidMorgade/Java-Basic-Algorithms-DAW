@@ -76,4 +76,37 @@ public class IntManipulation {
         }
         return modulus;
     }
+    public static char generateRandomLetter(String type) {
+        int min = 0;
+        int max = 0;
+        if(type.equals("mayus")) {
+            min = 65;
+            max = 90;
+        }
+        if(type.equals("minus")) {
+            min = 97;
+            max = 122;
+        }
+        return (char) randomNumber(min, max);
+    }
+    public static String passwordGenerator(int size) {
+        String password = "";
+        int chosen;
+        for (int i = 0; i < size; i++) {
+            chosen = randomNumber(1, 3);
+            switch(chosen) {
+                case 1: //numero
+                    password += randomNumber(1, 9);
+                    break;
+                case 2: // mayus
+                    password += generateRandomLetter("mayus");
+                    break;
+                case 3: //minus
+                    password += generateRandomLetter("minus");
+                    break;
+            }
+        }
+        System.out.println(password);
+        return password;
+    }
 }
